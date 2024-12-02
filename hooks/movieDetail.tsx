@@ -10,7 +10,7 @@ export const useMoviewDetail = (id: string) => {
         queryKey: ['movieDetail', id],
         queryFn: async ({ queryKey }) => {
             const [, movieId] = queryKey;
-            const response = await axios.get(`http://www.omdbapi.com/?apikey=${API_Key}&i=${movieId}`)
+            const response = await axios.get(`https://www.omdbapi.com/?apikey=${API_Key}&i=${movieId}`)
             return response.data
         },
         enabled: !!id,
