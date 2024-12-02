@@ -27,7 +27,11 @@ export default function Page({params}:{params: {id: string}}) {
             </button>
             <div className="flex justify-center mt-6">
                 <div className="flex justify-center items-center w-[50%] ">
-                    {movieDetail.data ? (
+                    {movieDetail.isLoading ? (
+                        <p className="text-base font-medium">Loading...</p>
+                    ): (
+                    movieDetail.data  ? (
+                        
                     <div className="sm:flex sm:flex-row w-full sm:justify-around flex flex-col gap-5 ">
                         <div className="">
                             {movieDetail.data?.Poster.includes('N/A') ? (
@@ -77,7 +81,7 @@ export default function Page({params}:{params: {id: string}}) {
                     </div>
                     ): (
                         <div className="">No movie detail</div>
-                    )}
+                    ))}
                 </div>
             </div>
 
