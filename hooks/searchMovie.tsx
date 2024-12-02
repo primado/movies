@@ -9,7 +9,7 @@ export const useSearchMovie = () => {
     const searchMovie = useMutation({
         mutationKey: ['searchMovie'],
         mutationFn: async (s: string) => {
-            const response = await axios.get(`http://www.omdbapi.com/?apikey=${API_Key}&s=${s}`, {
+            const response = await axios.get(`https://www.omdbapi.com/?apikey=${API_Key}&s=${s}`, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
