@@ -50,8 +50,8 @@ export default function Page({params}:{params: {id: string}}) {
 
                         </div>
                         <div className="jflex justify-start items-start">
-                            <h1 className="text-2xl font-semibold text-left text-[#222]">{movieDetail.data?.Title}</h1>
-                            <div className="flex flex-col items-start justify-start gap-2">
+                            <h1 className="text-2xl font-semibold text-left text-[#222] my-2">{movieDetail.data?.Title}</h1>
+                            <div className="flex flex-col items-start justify-center gap-3">
                                 {movieDetail.data?.Released && (
                                     <MovieDetails termKey='Released' termValue={movieDetail.data?.Released} />
                                 )}
